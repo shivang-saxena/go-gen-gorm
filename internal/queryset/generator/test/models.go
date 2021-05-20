@@ -5,7 +5,7 @@ import (
 	"gorm.io/gorm"
 )
 
-//go:generate go run ../../../../cmd/goqueryset/goqueryset.go -in models.go
+//go:generate go run ../../../../cmd/go-gen-gorm/go_gen_gorm.go -in models.go
 
 // User is a usual user
 // gen:qs

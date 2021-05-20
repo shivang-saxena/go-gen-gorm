@@ -1,6 +1,6 @@
 package models
 
-//go:generate goqueryset -in models.go
+//go:generate go-gen-gorm -in models.go
 
 import (
 	forex "github.com/shivang-saxena/go-gen-gorm/internal/queryset/generator/test/pkgimport/forex/v1"
