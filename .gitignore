@@ -1,0 +1,4 @@
+/go-queryset
+/vendor
+/internal/parser/test/tmptestdir*/
+/bin

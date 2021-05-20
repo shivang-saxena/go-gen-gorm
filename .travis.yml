@@ -1,0 +1,10 @@
+language: go
+go:
+  - 1.11.x
+  - 1.12.x
+before_install:
+  - go get github.com/mattn/goveralls
+  - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v1.15.0
+script:
+  - env GO111MODULE=on make test
+  - env GO111MODULE=on $HOME/gopath/bin/goveralls -ignore "internal/queryset/generator/test/generated_models.go,examples/comparison/*/*.go,internal/queryset/generator/test/pkgimport/*.go,internal/queryset/generator/test/pkgimport/*/*/*.go" -v -service=travis-ci
