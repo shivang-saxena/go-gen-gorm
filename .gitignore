@@ -1,4 +1,4 @@
-/go-queryset
+/go-gen-gorm
 /vendor
 /internal/parser/test/tmptestdir*/
 /bin

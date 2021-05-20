@@ -50,7 +50,7 @@ func getTmpFileForCode(code string) *os.File {
 		log.Fatalf("can't create temp dir: %s", err)
 	}
 
-	f, err := getTempFileName(tmpDir, "go-queryset-test", ".go")
+	f, err := getTempFileName(tmpDir, "go-gen-gorm-test", ".go")
 	if err != nil {
 		log.Fatalf("can't create temp file: %s", err)
 	}
