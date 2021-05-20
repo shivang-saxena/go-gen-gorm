@@ -2,3 +2,5 @@
 /vendor
 /internal/parser/test/tmptestdir*/
 /bin
+.idea/
+.vscode/
