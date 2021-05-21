@@ -20,12 +20,15 @@ type Generator struct {
 
 // Generate generates output file with querysets
 func (g Generator) Generate(ctx context.Context, inFilePath, outFilePath string) error {
+
 	parsedFile, err := g.StructsParser.ParseFile(ctx, inFilePath)
 	if err != nil {
 		return errors.Wrapf(err, "can't parse file %s to get structs", inFilePath)
 	}
 
 	var r io.Reader
+	// Generate Query Sets for structs : will take type of file as a first argument
+	// Second argument is the details of structs. ie: List of Structs
 	r, err = GenerateQuerySetsForStructs(parsedFile.Types, parsedFile.Structs)
 	if err != nil {
 		return errors.Wrap(err, "can't generate query sets")
